@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: -moz-linear-gradient(45deg, rgb(244, 184, 255), rgb(211, 189, 255));
+    background-image: -webkit-linear-gradient(45deg, rgb(244, 184, 255), rgb(211, 189, 255));
+    background-image: linear-gradient(45deg, rgb(244, 184, 255), rgb(211, 189, 255));
+}
+
+.container {
+    position: relative;
+    width: 0px;
+    height: 0px;
+    background: #f8f4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: 0.5s;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        width: 40px;
+        height: 40px;
+        background: #f8f4ec;
+        border-radius: 5px;
+        opacity: 0;
+        transform: rotate(45deg);
+        transition: 0.5s;
+    }
+    .content {
+        min-width: 400px;
+        padding: 40px;
+        color: rgb(0, 0, 0);
+        opacity: 0;
+        transition: 0.5s;
+        transform: scale(0);
+    }
+    .toggleBtn {
+        position: absolute;
+        bottom: -20px;
+        min-width: 60px;
+        height: 60px;
+        background: #d63484;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        &::before {
+            content: "+";
+            font-size: 2.5em;
+            color: #fff;
+        }
+    }
+    &.active .content {
+        opacity: 1;
+        transition-delay: 0.5s;
+        transform: scale(1);
+    }
+    &.active .toggleBtn {
+        bottom: -90px;
+        transform: rotate(135deg);
+        background: #ce5a67;
+    }
+    &.active {
+        &::before {
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+        width: 400px;
+        height: 400px;
+        transition-delay: 0.5s;
+    }
+}
