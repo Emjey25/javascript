@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.mitadColors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .color1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: #ffffff;
+        flex: 1;
+    }
+    .color2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: #ff0000;
+        flex: 1;
+        padding-bottom: 1rem;
+        img {
+            width: 150px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+.main {
+    position: relative;
+    min-height: 100vh;
+    background: radial-gradient(#f0483a, #d10a20);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 100px;
+
+    header {
+        min-width: 100%;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        .logo {
+            max-width: 90px;
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+            li {
+                list-style: none;
+                a {
+                    position: relative;
+                    color: #ff0000;
+                    text-decoration: none;
+                    margin-left: 40px;
+                }
+                .active {
+                    color: black;
+                }
+                a:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.Phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    p {
+        color: #ffffff;
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+    img {
+        max-width: 35px;
+    }
+}
+
+.content {
+    z-index: 1000;
+    width: 100vw;
+    color: #070707;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    h2 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #464444;
+    }
+    p {
+        font-size: 1.2em;
+        line-height: 1.1em;
+        font-weight: 400;
+        max-width: 400px;
+        margin-bottom: 10px;
+        color: #bebebe;
+        text-wrap: pretty;
+    }
+    .btn {
+        background-color: #ff0000; /* Red */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        border-radius: 12px;
+        box-shadow: none;
+        text-transform: uppercase;
+        outline: none;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 15px;
+        display: inline-block;
+    }
+    .btn:hover {
+        background-color: #dadada;
+    }
+    .content-img {
+        .imgMuestra {
+            max-width: 500px;
+            position: relative;
+            .BuyPrecio {
+                width: 140px;
+                position: absolute;
+                top: 32px;
+                right: 18px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .text {
+        padding-left: 2rem;
+    }
+}
